@@ -1,0 +1,29 @@
+﻿database 이름 
+	: boardproject
+
+
+CREATE TABLE member( 
+	id VARCHAR(15) NOT NULL,
+	name VARCHAR(20),
+	password VARCHAR(20),
+	email_id VARCHAR(20),
+	email_domain VARCHAR(20),
+	tel1	 VARCHAR(5),
+	tel2	 VARCHAR(5),
+	tel3	 VARCHAR(5),
+	basic_addr	VARCHAR(80),
+	type	VARCHAR(5) DEFAULT 'U',
+	PRIMARY KEY(id)
+);
+
+
+CREATE TABLE board (
+	no int NOT NULL AUTO_INCREMENT,
+	title VARCHAR(50),
+	writer VARCHAR(50),
+	content VARCHAR(500),
+	viewCnt int DEFAULT '0',
+	PRIMARY KEY(no)
+);
+
+insert into member(id,name,password,type) values("admin","관리자","admin",'S');
