@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="0;url=/boardProject/board.do">
+<meta http-equiv="refresh" content="0;url=/boardProject/board.do"> <!-- main페이지를 jsp/board/list.jsp로 돌린다. -->
 
 
 
