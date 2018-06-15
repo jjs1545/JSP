@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function(){
+		$('button').click(function(){
+			//$('#div').remove();		//div와 포함된 모든 요소를 제거
+			//$('#div').empty();			//div를 제외한 하위 요소를 제거
+			//$('b').remove('.del');	//b 태그 중 class가 .del인 것을 제거
+			$('b').remove('.del, .new');	//.del .new 제거
+		});
+	});
+</script>
+</head>
+<body>
+	<button>Delete</button>
+	<div id="div" style="width:300px; height:200px; border:solid 1px black; background-color: lightgray;">
+		<b class='del'>Hello JavaScript</b> <br/>
+		Hello PHP	<br/>
+		<b class='del'>Hello jQuery</b> <br/>
+		<b class='new'>Hello Ruby</b>
+	</div>
+</body>
+</html>

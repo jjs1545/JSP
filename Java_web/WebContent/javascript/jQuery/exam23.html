@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function() {
+		var text="width: " + $('#div').width()+ '<br/>';
+			text += 'height : ' + $('#div').height() + '<br/>';
+			text += 'innerWidth : ' + $('#div').innerWidth() + '<br/>';
+			text += 'outerWidth : ' + $('#div').outerWidth() + '<br/>';
+			text += 'outerHeight: ' + $('#div').outerHeight() + '<br/>';
+			text += 'window.width: ' + $(window).width() + '<br/>';
+			text += 'window.height: ' + $(window).height() + '<br/>';
+		$('#div').html(text);
+		
+		$('button').click(function() {
+			$('#div').width(400).height(400);		// 400 x 400
+		});
+			//TODO
+	});
+</script>
+<style>
+#div {
+	height: 100px;
+	width: 300px;
+	padding: 10px;
+	margin: 3px;
+	border: 1px solid blue;
+	background-color: skyblue;
+	font-size:10px;
+}
+</style>
+</head>
+<body>
+	<button>크기 변경</button>
+	<div id="div"></div>
+</body>
+</html>

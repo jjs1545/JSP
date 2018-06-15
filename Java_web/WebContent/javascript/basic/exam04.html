@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* 
+	Logical OR -> expr1 || expr2 -> expr1을 true로 변환할 수 있는 경우 expr1을 반환하고,
+	그렇지 않으면 expr2를 반환, 따라서 부울 값과 함께 사용할 경우, expr1, expr2 둘 중 하나가 true인 경우 true 반환 
+	*/ 
+	
+/* 	true || alert('true가 출력 될까?');
+	false || alert('false가 출력 될까?');
+	 */
+	
+	/* 
+		Logical AND(&&) -> expr1 && expr2 
+		expr1을 false로 변환할 수 있는 경우 expr1을 반환하고, 그렇지 않으면 expr2를 반환
+		따라서 부울 값과 함께 사용할 경우, expr1과 expr2가 모두 true인 경우 true를 반환하고
+		그렇지 않으면 false를 반환.
+	*/
+	
+	//SCE를 활용하여, if~else 없이 짝수 홀수 판단
+	var num = 5;
+	true && alert('짝수입니다.');
+	//(num % 2 == 0) || alert('홀수입니다.');
+	
+	/*
+		Logical NOT !expr
+		-> 단일 피연산자가 true로 변환될 수 있는 경우 false를 반환,
+		그렇지 않으면 true 반환
+	*/
+	
+	/* var input = confirm('확인하시겠습니까?');
+	alert(input);
+	
+	var name = prompt('이름을 입력하세요', '여기에 입력');
+	alert(name);
+	
+	var age = prompt('나이를 입력하세요', '나이')	//string
+	alert(age);
+	alert(age + 10); // '15' + 10 => 1510
+	
+	var age = Number(age);
+	alert(age + 10); //15+10; */
+</script>
+</head>
+<body>
+
+</body>
+</html>

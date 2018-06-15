@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function calculate() {
+		var form = document.calForm;
+		form.out.value=eval(form.in.value);
+		//eval(): 자바스크립트 소스를 동적으로 실행
+		// 3+4 -> 소스코드이기 때문에 7이 된다.
+	}
+</script>
+</head>
+<body>
+	<form name="calForm">
+		계산할 수식 입력
+		<input type="text" name="in" size="20"/><br/>
+		수식 계산 결과
+		<input type="text" name="out" size="20"/><br/>
+		<input type="button" value="계산" onclick="calculate()"/>
+		 
+	</form>
+</body>
+</html>

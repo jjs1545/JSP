@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* //자바의 Scope
+	//자바는 변수를 사용할 수 있는 스코프가 { } 형태의 코드블록으로 나뉜다.
+	int a = 10;
+	if(a == 10) { 
+		System.out.println(a);
+		int b = 20;
+		System.out.println(b);
+	}
+	System.out.println(b); //Error
+	//b라는 변수가 if내의 영역에 있지만, 벗어났기 때문에 에러발생! */
+	
+	//자바 스크립트의 Scope
+	// { } 코드블록으로 영역을 나누지 않는다.
+	var a = 10;
+	if(a===10) {
+		console.log(a);
+		var b = 20;
+		console.log(b);
+	}
+	console.log(a + b);	//자바 스크립트는 가능
+	
+	/* 
+		자바스크립트는 특정 구문이 실행 될 때 새로 생성! 
+		function	: 함수, 가장 많이 사용
+		with		: 곧 사라질 구문 (ECMAScript6 부터 Deprecated)
+		catch		: 예외처리 구문
+	*/
+	
+	//1. function을  활용한 스코프 생성
+	b = 5
+	
+	function foo() {
+		var val = 'hello JS';
+	}
+	//console.log("foo():"+ val)
+	console.log(val)
+	console.log("foo():" + typeof val === 'undefined')
+	foo()
+	alert(val)
+	
+	c
+	//var가 정의되지 않았는가? 보이지 않기에 true
+			
+	//2. with을 활용한 스코프 생성	--> with 영역 내부에 쓴 것을 외부에서도 사용 가능
+	
+	with( {inScope: 'hello'}) {
+		var val = 'world';
+		console.log(inScope);
+	}
+	console.log(typeof inScope === 'undefined');		//사용 불가
+	console.log( val === 'world' );						//사용 가능
+	//with 구문은 코드가 모호 해질 가능성이 아주 높다!
+	
+	//3. catch를 활용한 스코프 생성
+	try {
+		throw new exception('fake exception');
+	} catch (err) {
+		var value = 'catch scope';
+		console.log(err instanceof ReferenceError === true);	//err 사용가능
+	}
+	console.log( value === 'catch scope');		//value 사용 가능!
+	console.log(typeof err === 'undefined');	// err	사용 불가!
+	//catch 구분의 매개변수인 err는 해당 스코프 내에만 포함되고,
+	//catch 구문의 { } 내부의 변수는 외부에서도 접근 가능!
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function() {
+		$('#hide').click(function() {
+			$('h2').hide();
+		});
+		$('#show').click(function() {
+			$('h2').show();
+		});
+		$('button').click(function(){
+			$('h2').toggle(2000);
+		});
+	});
+	
+</script>
+</head>
+<body>
+	<h2>jQuery</h2>
+	<!-- <button id="hide">HIDE</button>
+	<button id="show">SHOW</button> -->
+	<button>Toggle</button>
+</body>
+</html>

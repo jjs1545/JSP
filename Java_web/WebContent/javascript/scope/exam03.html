@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="div1">Click div 1</div>
+	<div id="div2">Click div 2</div>
+	<div id="div3">Click div 3</div>
+<script>
+	var i, len=4;
+	
+	// global scope: 스크립트 전역에서 접근 가능한 범위
+	// addEventListener()
+	
+	// addEventListner()로 콜백 함수를 설정할 때 익명 함수가 선언!
+	// 각각의 div 요소에 따라 Scope 생성!
+	// DOM을 활용한 JavaScript Event Binding..
+	for (i=1;i<len;i++) {
+		document.getElementById('div'+i).addEventListener('click', function() {
+			alert('clicked div #' + i);
+		}, false)
+	}
+	
+	//b() Scope 내에서 a 변수를 사용할 수 있는 이유는
+	//Scope-Chain: 식별자를 찾는 과정
+	function a() {
+		var a = 1;				// a function 
+		function b() {
+			console.log(a);		// b function
+		}
+		b();
+	}
+	a();
+	
+</script>
+</body>
+</html>

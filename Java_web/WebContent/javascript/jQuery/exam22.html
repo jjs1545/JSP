@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	//class 적용하기
+	$(document).ready(function() {
+		/* $('h1,h2,p').addClass('obj');
+		//<p class="obj">문단 입니다.</p>
+		$('div').addClass('important obj');
+		//띄어쓰기로 구분(2개 이상) 
+		$('h1').removeClass('obj');*/
+		// h1 태그 중 obj 클래스를 제거
+		//$('h1, h2, p').toggleClass('obj');	//반대로 적용!
+		alert($('h1').css('color'));	//color 추출
+		$('h1').css({	// css 적용
+			'background-color': 'gray',
+			'font-size': '50px'
+		});
+	})
+</script>
+<style>
+	.important {
+		font-weight: bold;
+		font-size: xx-Large;
+	}
+	.obj {
+		color:blue;
+	}
+</style>
+</head>
+<body>
+	<h1 class='obj'>문장1</h1>
+	<h2 class='obj'>문장2</h2>
+	<p>문단</p>
+	<div>영역</div>
+	<br/>
+	<br/>
+	<button>적용</button>
+</body>
+</html>

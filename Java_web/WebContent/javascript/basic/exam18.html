@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function showInfo() {
+		var info= '';
+		var count =0;
+		var length = document.inputForm.hobby.length; //inputForm의 hobby의 길이 -> 총 개수
+		for(var i=0; i<length; i++) {
+			if(document.inputForm.hobby[i].checked) {
+				info += document.inputForm.hobby[i].value + '\n';
+				count++;
+			}  
+		}
+		if(count != 0) {
+			alert(info);
+		}else {
+			alert('선택된 항목이 없습니다.');
+		}
+	}
+	
+	function selectAll() {
+		var length = document.inputForm.hobby.length;
+		for(var i=0; i<length; i++) {
+			document.inputForm.hobby[i].checked=true;
+		}
+		
+	}
+	
+	function deSelectAll() {
+		var length = document.inputForm.hobby.length;
+		for(var i=0; i<length; i++) {
+			document.inputForm.hobby[i].checked=false;
+		}
+		
+	}
+	
+	//toggle : 하나의 키로 설정된 값을 전환, ON/OFF
+	function toggle() {
+		var length = document.inputForm.hobby.length;
+		for(var i=0; i<length; i++) {
+			if(document.inputForm.hobby[i].checked){
+				document.inputForm.hobby[i].checked=false;		
+			} else{
+				document.inputForm.hobby[i].checked=true;
+			}
+		}
+		
+	}
+	
+</script>
+</head>
+<body>
+	<form action="process.jsp" method="post" name="inputForm">
+		당신의 취미를 선택하세요.<br/>
+		<input type="checkbox" name="hobby" value="golf"/>
+		골프<br/>
+		<input type="checkbox" name="hobby" value="gateball"/>
+		게이트볼<br/>
+		<input type="checkbox" name="hobby" value="bowaling"/>
+		볼링<br/>
+		<input type="checkbox" name="hobby" value="shooting"/>
+		사격<br/>
+		
+		<input type="button" value="전체선택" onclick="selectAll()"/>
+		<input type="button" value="선택해제" onclick="deSelectAll()"/>
+		<input type="button" value="토글버튼" onclick="toggle()"/>
+		<input type="button" value="선택정보" onclick="showInfo()"/>
+	</form>
+</body>
+</html>

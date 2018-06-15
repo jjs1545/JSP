@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	//자식 노드 추가
+	$(document).ready(function() {
+		$('#btn1').click(function() {
+			//$('div').append('<h2>세번째 문장</h2>');		//마지막에 추가
+			$('div').prepend('<h2>세번째 문장</h2>');		//맨 앞에 추가!
+		});
+		$('#btn2').click(function() {
+			//$('ol').append('<li>핑크</li>');
+			$('ol').prepend('<li>핑크</li>');
+		});
+		$('#btn3').click(function() {
+			var text1 = '<h4>추가된 내용 (일반적인 방법)</h4>';
+			var text2 = $('<h4></h4>').text('추가된 내용 (제이쿼리)');
+			var text3 = document.createElement('h4');
+			text3.innerHTML = '추가된 내용(innerHTML)';
+			
+			$('body').append(text1, text2, text3);
+		});
+	});
+
+</script>
+</head>
+<body>
+	<div>
+		<h2>첫번째 문장</h2>
+		<h2>두번째 문장</h2>
+	</div>
+	색의 종류
+	<ol>
+		<li>블루</li>
+		<li>레드</li>
+		<li>블랙</li>
+	</ol>
+	
+	<button id="btn1">문장 추가</button>
+	<button id="btn2">문장 추가</button>
+	<button id="btn3">본문 추가</button>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/*  
+		BOM: 브라우저 객체 모델
+			window 객체
+				- location
+				- navigateor
+				- history
+				- screen
+				- document
+	*/
+	//location.href = 'http://www.douzone.com';
+	//location = 'http://www.daum.net';
+	location.assign('https://www.naver.com');
+	
+	window.alert('Hello');
+	window.prompt('이름을 입력하세요.', '여기에 입력');
+	
+	var sub = window.open (
+		'',
+		'',
+		'width=400, height=500, scrollbar=yes, resizable=yes'
+	);
+	sub.moveTo(0, 0); 
+	
+	/* setInterval(function(){ 
+		sub.moveBy(10,10);
+	}, 500); */
+	
+	var child = window.open(
+		'',
+		'',
+		'width=300, height=200'
+	);
+	
+	var width = screen.width;
+	var height = screen.height;
+	
+	child.moveTo(0,0);
+	child.resizeTo(width, height);
+	
+	setInterval(function() { 
+		child.resizeBy(-30,-30);
+		child.moveBy(10,10);
+	},500);
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function() {
+		//$("ul li:first").hide();
+		//$("h1:first").hide();
+		//요소의 순서가 필요할 때는 "태그:순서"를 써라.
+		
+		//ul 갖고 있는 요소에 처음 것은 전부 hide()
+		//$("ul li:first-child").hide();
+		$("ul li:first-child").fadeOut(5000);	//5초 후 hide()
+	});
+</script>
+</head>
+<body>
+	<h1>취미 종류</h1>
+	<ul>
+		<li>골프</li>
+		<li>게이트볼</li>
+		<li>볼링</li>
+		<li>사격</li>
+	</ul>
+	
+	<h1>꽃 종류</h1>
+	<ul>
+		<li>할미꽃</li>
+		<li>장미</li>
+		<li>라일락</li>
+		<li>튤립</li>
+	</ul>
+</body>
+</html>

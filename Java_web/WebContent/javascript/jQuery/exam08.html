@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function() {
+		$("input").focus(function() {
+			$(this).css("background-color", "#FFF");
+		});
+		
+		$("input").blur(function() {
+			$(this).css("background-color","#CCC");
+		});
+	});
+</script>
+</head>
+<body>
+	이름<input type="text" name="name"/><br/>
+	전화번호<input type="text" name="phone"/>
+</body>
+</html>

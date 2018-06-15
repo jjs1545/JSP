@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	for(var val=0;val<5;val++) {
+		alert(val + "번째 루프...")
+	}
+	
+	var names = ['아이유','강다니엘','송민호','전효성'];
+	
+	for(var idx=0; idx<4; idx++) {
+		alert((idx+1) + "번째 이름: " + names[idx]);	
+	}
+	
+	//foreach
+	for (var i in names) {
+		alert(names[i]);
+	}
+	
+	for(var i=0; true; i++) {
+		alert(i + "번째 반복문..");
+		//if(confirm('계속하시겠습니까?')==false) -> { break; }
+		if(!confirm('계속하시겠습니까?')) {
+			break;
+		}
+	}
+	alert('프로그램 종료');
+</script>
+</head>
+<body>
+
+</body>
+</html>

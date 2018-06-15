@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function(){
+		//동일 수준을 찾는 메소드
+		/* $('h2').siblings().css({
+			'color':'red',
+			'border':'2px solid red'
+		});
+		
+		$('h2').siblings('p').css({	// 같은 레벨 중의 p 요소
+			'color' : 'red',
+			'border' : '2px solid red'
+		}); */
+		
+		/* $('span').next().css({	// span의 오른쪽 방향에 있는 동일 레벨의 요소
+			'color':'red',
+			'border':'2px solid red'
+		}); */
+		
+		/* $('span').nextAll().css({	// 오른쪽 방향의 모든 동일 레벨의 요소
+			'color' : 'red',
+			'border': '2px solid red'
+		}); */
+		 $('span').nextUntill('p').css({	// span부터 오른쪽 방향의 동일 레벨 p 전까지
+				'color' : 'red',
+				'border': '2px solid red'
+			});
+	});
+ 
+</script>
+<style>
+	.siblings * {		/*   * 자식 전부 다    */
+		display: black;
+		border: 2px solid gray;
+		color: gray;
+		padding: 5px;
+		margin: 10px;
+	}
+</style>
+</head>
+<body class="siblings">
+	<div>
+		<p>p</p>
+		<span>span</span>
+		<h2>h2</h2>
+		<h3>h3</h3>
+		<p>p</p>
+	</div>
+	<h1>h1</h1>
+</body>
+</html>

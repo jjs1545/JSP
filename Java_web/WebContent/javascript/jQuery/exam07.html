@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	/* 
+		이벤트 핸들러
+			- Mouse		: click, abclick, mouseenter, mouseleave
+			- keyboard	: keydown, keyup, keypress
+			- Form		: submit, focus, blur, change
+			- Document/window
+				: load, resize, unload, scroll
+	*/
+	
+	$(document).ready(function() {
+		$("#mouse").hover(function() {
+			$(this).css("background-color", "red");
+		}, function() {
+			$(this).css("background-color", "blue");
+		});
+		
+		/* $("#mouse").mousedown(function() {
+			alert('마우스를 눌렀습니다.');
+		}); */
+		
+		/* $("#mouse").mouseup(function() {
+			alert('마우스 클릭에서 손을 떼지 마세요.');
+		}); */
+		
+		$("#mouse").mouseleave(function() {
+			alert('마우스가 떠났습니다.');
+		});
+	})
+</script>
+</head>
+<body>
+	<!-- <h1 id="mouse">문장에 마우스 이벤트를 실험해 보세요.</h1> -->
+	 <span id="mouse">문장에 마우스 이벤트를 실험해 보세요</span>
+</body>
+</html>

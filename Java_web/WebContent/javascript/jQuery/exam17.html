@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	/*
+		수행순서
+		1. Hello world가 빨간색으로 변경
+		2. 슬라이드가 올라갔다가,
+		3. 슬라이드가 내려온다.
+		4. Hello World가 파랑색으로 변경
+	*/
+	$(document).ready(function() {
+		$('h1').css('color','red')
+		.slideUp(2000)
+		.slideDown(2000, function(){
+			$('h1').css('color','blue');
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>Hello World</h1>
+	<button>Click</button>
+</body>
+</html>

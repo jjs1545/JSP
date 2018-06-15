@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// JSON.stringfy()
+	// 1. 자바스크립트 객체 값 -> JSON 형태의 문자열 반환
+	// JSON.pars()
+	// : JSON 형태의 문자열 -> 자바스크립트 객체
+	var member = {
+			name: '강감찬',
+			phone: '010-1111-2332',
+			addr: '서울시 서초구',
+			
+			info: function() {
+				var list = '';
+				for(var key in this) {
+					if(key != 'info')
+						list += key + ':' + this[key] + '<br/>';
+				}
+				document.write(list);
+			}
+			
+	}
+	member.info();
+	var str = JSON.stringify(member)
+	document.write(str + '<br/>');
+	
+	var p = JSON.parse(str);
+	document.write(p + '<br/>');
+	
+	document.write('name: ' + p.name + ', phone: ' + p.phone + ', addr: ' + p.addr + '<br/>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

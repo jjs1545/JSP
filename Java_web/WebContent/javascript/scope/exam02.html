@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	var Person = { };
+	Person.name = '홍길동';
+	Person.phone = '010-1234-5678';
+	Person.addr = '천안시 두정동';
+	Person.info = function() {
+		var list = ' ';
+		
+		//with: 특정 객체를 생략하고 속성이나 메소드를 사용할 수 있도록 스코프 생성!
+		with(this) {// with(object)
+			list += 'name : ' + name + '\n';
+			list += 'phone : ' + phone + '\n';
+			list += 'addr : ' + addr + '\n';
+		}
+		alert(list);
+	}
+	//document.write('hello');
+	with(document){
+		write('hello');	
+	}
+	
+	Person.info();
+</script>
+</body>
+</html>

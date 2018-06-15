@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	//객체 생성과 동시에 속성과 메소드 초기화
+	var Person = {
+		//key : value
+		name: '고길동',
+		age: 40,
+		phone: '010-3333-4444',
+		addr: '서울시-서초구',
+		
+		info: function() {
+			var list = '';
+			for(var key in this){
+				if(key != 'info')
+					list += key + " : " + this[key] + '\n';
+			}
+			alert(list);
+		}
+	};
+	
+	Person.info();		//info() 메소드 호출!
+	alert(Person.name);	//객체의 멤버 연산자로 접근 가능!
+</script>
+</head>
+<body>
+
+</body>
+</html>

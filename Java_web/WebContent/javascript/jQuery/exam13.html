@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function() {
+		/* $('button').click(function() {
+			$('div').animate({
+				left: '200px',
+				height: '50px',
+				width: '50px',
+				opacity: '0.4'
+			});
+		}); */
+		
+		$(':button').click(function() {
+			$('div').animate({
+				//left: '200px',
+				height: '+=50px',	//점점 증가시킬 때 += 연산
+				width: '+=50px',
+				opacity: '0.4'
+			});
+			$('div').animate({
+				height: 'toggle',
+				width: 'toggle'
+			})
+		});
+	});
+</script>
+</head>
+<body>
+	<button>Click!!</button>
+	<div style="width:100px; heigth:100px; background-color: lightblue; position:absolute"></div>
+	
+</body>
+</html>

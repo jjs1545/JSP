@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function whenSubmit() {
+		//폼에 있는 데이터를 가져와서 판단!
+		var f = document.mForm;
+		var pw = f.pw.value;
+		var pw_chk = f.pw_chk.value;
+		
+		if(pw == pw_chk) {
+			alert('성공!');
+		} else {
+			alert('실패!');
+		}
+		return false;
+	}
+	
+	function countIncrease() {
+		// 1. 아이디 값을 가져와 설정!
+		var spanObj = document.getElementById("cntSpan");
+		// 2. 설정한 변수에 innerHTML = 1 증가 및 파싱 후 대입
+		spanObj.innerHTML = parseInt(spanObj.innerHTML) + 1;
+	}
+</script>
+</head>
+<body>
+	<form name="form" action="Login.do" onsubmit="return whenSubmit()">
+		아이디 <input type="text" name="id" size="20"/> <br/>
+		비밀번호 <input type="password" name="pw" size="20"/><br/>
+		비밀번호 확인 <input type="password" name="pw_chk" size="20"/><br/>
+		<input type="submit" value="제출"/>
+	</form>
+	<br/>
+	
+	<!-- 
+		1. span 태그에 id 설정 및 출력
+		2. input 버튼 생성 onclick 이벤트 함수 호출
+	 -->
+	 <span id="cntSpan">0</span>번 클릭
+	 <input type="button" value="클릭" onclick="countIncrease()"/>
+</body>
+</html>

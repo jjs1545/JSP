@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function(){ 
+		alert('HTML 추출: ' + $('#p').html() + '\n' 					//InnerHTML
+				+ 'TEXT 추출:' + $('#p').text());						//InnerText
+				//$('#p') -> getById()
+				$(':button').click(function() {
+					alert('이름 추출: ' + $('#name').val());			//value 추출 방법
+				});
+				alert('추출된 더존 주소: ' + $('#site').attr('href'));	//링크 추출
+	});
+</script>
+</head>
+<body>
+	<a href="http://www.douzone.com" id="site">더존</a>
+	<p id="p">제 이름은<b>홍길동</b>이고, 별명은<i>의적</i>입니다.</p>
+	이름입력<input type="text" id="name"/>
+	<button>입력완료</button>
+</body>
+</html>

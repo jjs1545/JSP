@@ -1,0 +1,63 @@
+<!-- 
+		  [실행화면]
+	
+		  [Q.1]다음 중 자바의 접근 제한자가 아닌 것은?
+		  1. public
+		  2. private
+		  3. extends
+		  4. default
+		  [정답 확인] [지우개 찬스]
+		
+		  - 페이지 화면은 위와 같으며 [정답 확인]과 [지우개 찬스]는 버튼
+		  - 정답 목록을 선택 시 사용자에게 메시지로
+		    '정말로 선택하시겠습니까?' 출력, 확인 시 파란색 표시
+		  - [정답 확인]을 누르면 정답을 초록색으로 표시
+		  - [지우개 찬스]를 누르면,
+		    "지우개 찬스는 단 한번 사용 가능합니다.
+		     정말로 사용하시겠습니까?" 출력 후 확인을 누르면,
+		    "지우개 찬스가 소멸됩니다." 출력 후
+		    정답이 아닌 목록 하나와 [지우개 찬스] 버튼 사라짐
+		
+ -->
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function(){
+		$('h2').on({
+			click:function(){
+				$('h2').css('color', 'black');
+				$(this).css('color', 'blue');
+				if(!confirm("정말로 선택하시겠습니까?")) {
+					$(this).css('color', 'black');
+					return false
+				}
+				return true;
+			}
+		});		
+		$('#result').click(function(){
+			$('#3').css('color', 'green');
+		});		
+		$('#erase').click(function(){
+			if(confirm("찬스는 단 한번 사용 가능합니다!\n정말로 사용하시겠습니까?")){
+				$('#2').hide();
+				$('#erase').hide();
+				alert('지우개 찬스가 소멸됩니다.');
+				return false;
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>[Q.1] 다음 중 자바의 접근 제한자가 아닌 것은?</h1>
+	<h2 id="1">1. public</h2>
+	<h2 id="2">2. private</h2>
+	<h2 id="3">3. extends</h2>
+	<h2 id="4">4. default</h2>
+	<button id="result">정답 확인</button>
+	<button id="erase">지우개 찬스</button>
+</body>
+</html>
+
+

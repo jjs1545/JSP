@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function(){
+		//$('a').hide();
+		//$("[name]").hide();	// []: 속성
+		//$("a[href]").hide();	// href 속성이 존재한다면,
+		$("a[target='_blank']").hide();	// target 속성이 _blank 값이라면
+	});
+</script>
+</head>
+<body>
+	<a>다음</a>
+	<br/>
+	<a href="http://www.douzone.com">더존</a>
+	<br/>
+	<a href="https://www.naver.com" target="_blank">네이버</a>
+	<br/>
+	<input type="button" name="input" value="버튼"/>
+	<br/>
+</body>
+</html>

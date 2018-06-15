@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type='text/css'>
+@import url("NewFile.css");
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+var calculate;
+var result;
+
+function calculator() {
+	
+}
+
+function button1_click() {
+	var num_1=1;
+	document.getElementById('test').innerHTML=num_1;
+}
+
+function button2_click() {
+	var num_2=2;
+	document.getElementById('test').innerHTML=num_2;
+}
+
+function button3_click() {
+	var num_3=3;
+	document.getElementById('test').innerHTML=num_3;
+}
+
+function button4_click() {
+	var num_4=4;
+	document.getElementById('test').innerHTML=num_4;
+}
+
+function button5_click() {
+	var num_5=5;
+	document.getElementById('test').innerHTML=num_5;
+}
+
+function button6_click() {
+	var num_6=6;
+	document.getElementById('test').innerHTML=num_6;
+}
+
+function button7_click() {
+	var num_7=7;
+	document.getElementById('test').innerHTML=num_7;
+}
+
+function button8_click() {
+	var num_8=8;
+	document.getElementById('test').innerHTML=num_8;
+}
+
+function button9_click() {
+	var num_9=9;
+	document.getElementById('test').innerHTML=num_9;
+}
+
+function button0_click() {
+	var num_0=0;
+	document.getElementById('test').innerHTML=num_0;
+}
+
+function buttonAdd_click() {
+	calculate = "+" ;
+	result = num1 +num2;
+}
+
+function buttonMin_click() {
+	calculate = "-" ;
+	result = num1 +num2;
+}
+
+function buttonMul_click() {
+	calculate = "*" ;
+	result = num1 +num2;
+}
+
+function buttonDiv_click() {
+	calculate = "/" ;
+	result = num1 +num2;
+}
+
+function buttonAns_click() {
+	calculate = "=" ;
+}
+ 
+</script>
+</head>
+<body>
+<!-- <input type = "text" id = "cals" value=""/>
+<input type = "text" id = "ress" /><br/> -->
+
+<div id="test"></div>
+
+<input type="button" id="button1" onclick="button1_click();" value="1" />
+<input type="button" id="button2" onclick="button2_click();" value="2" />
+<input type="button" id="button3" onclick="button3_click();" value="3" /><br/>
+<input type="button" id="button4" onclick="button4_click();" value="4" />
+<input type="button" id="button5" onclick="button5_click();" value="5" />
+<input type="button" id="button6" onclick="button6_click();" value="6" /><br/>
+<input type="button" id="button7" onclick="button7_click();" value="7" />
+<input type="button" id="button8" onclick="button8_click();" value="8" />
+<input type="button" id="button9" onclick="button9_click();" value="9" />
+<input type="button" id="button0" onclick="button0_click();" value="0" /><br/>
+
+<input type="button" id="buttonAdd" onclick="buttonAdd_click();" value="+" />
+<input type="button" id="buttonMin" onclick="buttonMin_click();" value="-" />
+<input type="button" id="buttonMul" onclick="buttonMul_click();" value="*" />
+<input type="button" id="buttonDiv" onclick="buttonDiv_click();" value="/" />
+<input type="button" id="buttonAns" onclick="buttonAns_click();" value="=" />
+
+</body>
+</html>

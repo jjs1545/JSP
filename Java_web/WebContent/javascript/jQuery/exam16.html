@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function() {
+		$(':button').click(function() {
+			$('h2').hide(2000, function() {	//이벤트가 다 끝나고 수행
+				alert('문장이 사라졌죠?');		//*핸들러 함수의 필요성
+			});
+			//HIDE가 수행된 뒤에 alert를 수행!
+			//하지만 hide 상태인 경우에는 alert 바로 수행!
+		});
+	});
+	
+</script>
+</head>
+<body>
+	<button>Button</button>
+	<h2>나는 문장이야~</h2>
+</body>
+</html>

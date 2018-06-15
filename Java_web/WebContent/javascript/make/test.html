@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계산기</title>
+	<script>
+		function sum() {
+			var n1 = Number(document.getElementById("num1").value);
+			var n2 = Number(document.getElementById("num2").value);
+			var sum = n1+n2;
+			alert("덧셈 결과는 :" + sum);
+		}
+		function sub() {
+			var n1 = Number(document.getElementById("num1").value);
+			var n2 = Number(document.getElementById("num2").value);
+			var sub = n1-n2;
+			alert("뺼셈 결과는 :" + sub);
+		}
+		function mul() {
+			var n1 = Number(document.getElementById("num1").value);
+			var n2 = Number(document.getElementById("num2").value);
+			var mul = n1*n2;
+			alert("곱셈 결과는 :" + mul);
+		}
+		function div(n1, n2) {
+			var n1 = Number(document.getElementById("num1").value);
+			var n2 = Number(document.getElementById("num2").value);
+			var div = n1/n2;
+			alert("나눗셈 결과는 :" + div);
+		}
+	
+	</script>
+</head>
+<body>
+	<h1>계산기</h1>
+	
+	<form action="test.html" name="test">
+		숫자1: <input type="text" id="num1" name="num1" value=""><br/>
+		숫자2: <input type="text" id="num2" name="num2" value=""><br/>
+		<p></p>
+		<input type="button" id="sum_button" value="덧셈" onclick="sum()"/> 
+		<input type="button" id="sub_button" value="뺄셈" onclick="sub()"/> 
+		<input type="button" id="mul_button" value="곱셈" onclick="mul()"/> 
+		<input type="button" id="div_button" value="나눗셈" onclick="div()"/> 
+	</form>
+</body>
+</html>

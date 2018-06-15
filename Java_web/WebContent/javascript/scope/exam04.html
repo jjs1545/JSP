@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- exam03의 global scope의 문제를 해결해보자. -->
+	<div id="div1">Click div 1</div>
+	<div id="div2">Click div 2</div>
+	<div id="div3">Click div 3</div>
+	
+	<script>
+		var len = 4;
+		for(var i=1; i<len; i++) {
+			setDivClick(i);
+		}
+
+		/* 
+		
+		setDivClick(1);
+		setDivClick(2);
+		setDivClick(3);
+		setDivClick(4); 
+		
+		*/		
+		
+		/* 
+			스코프의 지속성
+			setDivClick 함수는 호출되면 해당 function의 스코프가 생성되고,
+			div1을 위한 onclick event가 설정!	// i:1
+			div2, div3 는?	각각 i:2와 i:3
+					
+			스코프를 생성하는 것은 일반 언어와 다르지 않으나,
+			스코프의 지속성이라는 특성은 자바스크립트만의 강점!
+			
+			1. 새로운 스코프 생성 후 스코프 체인을 참조하는 함수를 변수에 넣을 수 있다.
+			2. 다른 함수의 인자로 넣을 수 있다.
+			3. 함수의 리턴 값으로 함수를 활용
+			
+			함수가 선언된 곳이 아닌 전혀 다른 곳에서 호출 될 경우가 있기에,
+			해당 함수가 참조하는 스코프를 지속해야 한다.
+		*/
+		
+		//setDivClick() 함수가 반복문에 의해 호출될 때 마다
+		//setDivClick function의 스코프를 생성
+		function setDivClick(idx) {
+				document.getElementById('div' + idx).addEventListener('click', function() {
+					alert('clicked div #' + idx);
+				}, false)
+		}
+	</script>
+</body>
+</html>

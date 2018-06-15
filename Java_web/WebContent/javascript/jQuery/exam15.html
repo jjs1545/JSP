@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function(){
+		//panel은 50px까지 증가하지만,
+		//stop 후 다시 슬라이드 수행 시 3초이기에,
+		//속도가 점점 느려지게 보인다.
+		
+		$('#slide').on({
+			click: function() {
+				$('#panel').slideDown(3000);
+			}
+		});
+		$('#panel').ablclick(function(){
+			$(this).stop();
+		});
+		$('button').click(function(){
+			$('#panel').stop();
+		});
+	});
+</script>
+<style>
+	#slide, #panel{
+		padding: 5px;
+		background-color: #33ddcc;
+		border: 2px solid #a2a2a2;
+	}
+	
+	#panel {
+		padding: 50px;
+		display: none;
+	}
+</style>
+</head>
+<body>
+	<button>STOP</button>
+	<br/><br/>
+	<div id="slide">슬라이드 내리기</div>
+	<div id="panel">Hello jQuery</div>
+</body>
+</html>

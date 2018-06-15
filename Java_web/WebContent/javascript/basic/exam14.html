@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/*
+		동적 문서 객체 생성
+		createElement(tagName): 노드 생성
+		createTextNode(text): 노드에 삽입될 Text 생성
+	*/
+	
+	window.onload = function() {
+			var tag = document.createElement('hi');
+			var textTag = document.createTextNode('hello');
+			
+			//문서 객체 연결
+			tag.appendChild(textTag);
+			document.body.appendChild(tag);
+			
+		}
+</script>
+</head>
+<body>
+
+</body>
+</html>

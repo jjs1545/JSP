@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	//프로토타입 객체
+	function Person(name, age) {
+		this.name = name;
+		this.age = age;
+		
+		/* this.walk = function(speed) {
+			console.log("%s가 %d의 속도로 걸어갑니다",this.name,speed)	//내부 객체  walk 생성	//Person함수 생성시 내부객체도 같이 생성해야한다.
+			
+		} */
+	}
+	
+	//프로토타입을 이용한 함수 추가
+	Person.prototype.walk = function(speed) {
+		console.log("%s가 %d의 속도로 걸어갑니다.", this.name, speed)	//프로토 타입으로 참조해서 walk를 생성한다 --> 메모리 효율이 좋다 Person 객체가 몇개이든
+																//프로토 타입으로 참조하면 필요할때만 생성하면 된다.
+	}
+	
+	/* 
+		- prototype 프로퍼티는 프로토타입 객체를 이용하여 객체를 생성했을 때,
+		객체들이 참고 할 수 있는 객체의 원형을 참조 
+		- 프로토타입 객체인 function의 객체를 참조!
+		- Person.prototype은 프로토타입 객체인
+		  function Person(name, age)를 참조 중이다.
+		- Person 함수를 이용해 객체를 만들면 (new Person) 모든 객체는
+		  walk라는 특성이 해당 메소드를 참조하는 형태로 인스턴스 생성!
+		
+		- 반면에, Person.walk = function(speeed) {...} 와 같은 형태로 메소드 추가 시에는
+		  Person을 생성할 때 마다 walk 특성이 포함된 형태로 생성이 된다.(비효율적 이다.)
+		- Person 생성 떄 마다 walk도 중복되어 생성된다.
+	*/
+	
+	//Person 객체를 둘 이상 생성 시 walk는 하나만!
+	var p1 = new Person('AAA', 30);
+	var p2 = new Person('BBB', 40);
+	
+	p1.walk(4);		//여기서 walk 생성
+	p2.walk(3);
+	
+</script>
+</body>
+</html>

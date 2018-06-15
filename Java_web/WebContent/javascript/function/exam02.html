@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function prnTotalSum(val1, val2){
+		function sum(val1, val2){
+			var s = 0;
+			for(var i = val1; i <= val2; i++){
+				s += i;
+			}
+			return s;
+		}
+		alert(val1 + '~' + val2 + "의 총합 : " + sum(val1, val2));
+	}
+	
+	//매개변수가 없는 함수를 선언하고 arguments를 활용하여 받아오기
+	function returnTest(){
+		alert('typeof : ' + typeof arguments); // object
+		alert(arguments.length); // 넘어온 인자의 개수
+		// returnTest(10, 20) : length -> 2
+		// returnTest(10) : length -> 1
+		var length = arguments.length;
+		for(var i in arguments){
+			alert(i + ' : ' + arguments[i]);
+		}
+		if(length == 2){
+			alert('sum : ' + sum(arguments[0], arguments[1]));
+		}
+	}
+	
+	function returnTest1(val){
+		alert(val);
+	}
+	
+	function returnTest2(val){
+		return; //함수 종료를 의미
+	}
+	
+	function sum(val1, val2){
+		return val1 + val2;
+	}
+	
+	var funcCall = function callStr(){
+		alert('hello');
+	}
+	
+	function call(funcCall) {
+		for(var i = 0; i < 3; i++){
+			funcCall();
+		}
+	}
+	
+	/* prnTotalSum(1, 10);
+	returnTest1(10);
+	returnTest2(20);
+	var s = sum(10, 20);
+	returnTest1(s); */
+// 	returnTest1(10, 20);
+// 	returnTest(10);
+// 	returnTest(10, 20);
+	//prnTotalSum(1, 10);
+	var s = sum(10, 20);
+	returnTest1(s);
+	call(funcCall);
+</script>
+</head>
+<body>
+
+</body>
+</html>

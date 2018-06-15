@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function(){
+		/* $('span').parent().css({	//상위 부모
+			'color':'red',
+			'border':'2px solid red'
+		}); */
+		
+		/* $('span').parents().css({ //상위 조상 전부
+			'color':'blue',
+			'border':'2px solid blue'
+		}); */
+		
+		/* $('span').parents('ul').css({
+			'color':'yellow',
+			'border': '2px solid yellow'
+		}); */
+		
+		// span의 상위 조상에서 div만의 부모 변경
+		// span~div 전까지 모두!
+		$('span').parentUntil('div').css({
+			'color':'green',
+			'border':'2px solid green'
+		});
+	});
+
+</script>
+</head>
+<body>
+	<div class="ancetor">
+		<div style="width:500px;">
+			div
+			<ul>
+				ul
+				<li>
+					li
+					<span>span</span>
+				</li>
+			</ul>
+		</div>
+		<div style="width: 500px;">
+			div
+			<p>
+				p
+				<span>span</span>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

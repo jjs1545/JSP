@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function() { 
+		//$("input").hide();	//보통 사용 안함
+		//$(":button").hide();	//모든 버튼 숨기기
+		//$("button").hide();		//순수 태그명, <button>만 숨겨짐
+		
+		$(":button").click(function() {
+			//$(this).hide();
+			//$("h1").hide();
+			alert('버튼 클릭');
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>----- Button List ------</h1>
+	<button>버튼1</button>	<!-- 아래 input 태그를 줄여씀 -->
+	<input type="button" name="btn" value="버튼2"/>
+</body>
+</html>

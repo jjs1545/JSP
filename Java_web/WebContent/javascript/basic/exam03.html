@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* 
+	var date = new Date();
+	var hour = date.getHours();
+	
+	if(hour<12) {
+		alert("오전 입니다.");
+	} else if (hour < 18) {
+		alert("오후 입니다.");
+	} else {
+		alert("저녁 입니다.");
+	} 
+	*/
+	
+	// 프롬프트를 이용한 입력 받기
+	var num = Number(prompt('정수를 입력하세요.'));
+	
+	switch(num % 2) {
+	case 0: alert('짝수입니다.'); break; 
+	case 1: alert('홀수입니다.'); break;
+	}
+	
+	alert(30 > 20 && 20 > 10);				//true
+	alert( typeof (30 > 20 && 20 > 10));	//boolean
+	
+	var number = 10;
+	alert(number++);
+	alert(number++);
+	alert(number++);
+	
+	(number > 10) ? alert('10보다 큽니다')
+				  : alert('10보다 작거나 같습니다.');
+	
+	alert('number : ' + number);
+	alert(number > 10 ? --number : ++number); 
+	
+	
+	
+</script>
+</head>
+<body>
+	<!-- <form action="exam03.html">
+		<input type="text" name="hi" id="hi" value="hi"/>
+		<input type="submit" value="제출"/>
+	</form>
+	<script>
+		var t = document.getElementById("hi");	
+		alert(t.value);
+	</script> -->
+</body>
+</html>

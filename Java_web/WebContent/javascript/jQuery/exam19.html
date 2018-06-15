@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function() {
+		$('#btn1').click(function(){
+			$('#text1').text('Hello jQuery');	
+		});
+		$('#btn2').click(function() {
+			$('#text2').html('<b>Hello JavaScript');
+		});
+		$('#btn3').click(function(){
+			$('#text3').val('Hello World');
+		})
+		$('#btn4').click(function(){
+			//text: 변환된 text
+			//oriText: 변환 전 text
+			var text = $('p').text(function(idx, oriText){	//이벤트 발생 시 마다 p 태그에서 추출!
+				return oriText + '!!!' + 'index :' +idx;	
+			});
+		});
+		
+		$('#site').attr('href','https://weather.naver.com');
+		$('#site').attr('href', function(i, oriValue) {
+			return oriValue + '/rgn/cityWetrMain.nhn';
+		});
+	});
+</script>
+</head>
+<body>
+	<a href="http://www.douzone.com" title="더존 홈페이지" id="site">더존 홈페이지</a>
+	<p id="text1">첫 번째 문단입니다.</p>
+	<p id="text2">두 번째 문단입니다.</p>
+	<input type="text" value="default value" id="text3"/><br/>
+	
+	<button id="btn1">TEXT 변환</button>
+	<button id="btn2">HTML 변환</button>
+	<button id="btn3">VALUE 변환</button>
+	<button id="btn4">변환</button>
+</body>
+</html>

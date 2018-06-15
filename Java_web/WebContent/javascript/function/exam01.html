@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/*
+		자바에서의 메소드 (method)
+			하나의 객체에서의 기능을 의미,
+			클래스에 정의되며 매개변수 및 리턴 형으로 정의된다.
+			접근제어 지시자를 통해 외부, 내부와의 분리를 돕는다.
+			모든 메소드는 클래스 내부에 존재하게 되어 있다.
+			
+		class MyClass {
+			public void foo() {}	
+			private int goo(int a, int b) { return a + b; }
+		}
+	
+		자바 스크립트의 함수와 메소드
+		함수(function)	: 특정 객체의 기능이 아닌 일반 함수
+		메소드(method)	: 객체의 기능을 뜻하는 메소드	 
+	*/
+	
+	//기본적으로 매개변수에 부여할 타입이 없기에 생략
+	//변수에 함수를 할당
+	function goo(a, b) {
+			return a + b;
+		}
+	
+	var result = goo(10, 20);
+	alert(result1);
+	
+	var result2 = goo('hello', 'JS');
+	alert(result2);
+	
+	var result3 = goo('hello', 20);
+	alert(result3);
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
