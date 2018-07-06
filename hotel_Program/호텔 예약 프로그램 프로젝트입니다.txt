@@ -1,0 +1,12 @@
+﻿팀장: 정주신 팀원: 주희정, 류동환
+
+svn -> https://192.168.1.28/svn/nProject
+
+id: ryu
+pw: 123
+
+데이터베이스
+-> NOSQL MONGO_DB
+
+데이터베이스 : local
+컬렉션 : users2, post
