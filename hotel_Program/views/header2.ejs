@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/header.css" />
+
+
+</head>
+<body>
+	<div class = "header">
+	<div class = "logo">
+	<h1 id = "logo">HOTELETOH</h1>
+	</div>
+	<div class = "list1">
+		<button id = "question" onclick="location.href='/process/listpost?page=0&perPage=5'" >Q&A</button>
+		<button id = "search-record" onclick="location.href='/public/map.html '">찾아오시는 길</button>
+		<button id = "sign-up" onclick="location.href='/mypage'" >내정보</button>
+		<button id = "sign-up" onclick="location.href='/logout'" >로그아웃</button>
+	</div>
+	
+	<div class="bg-img">
+  <form action="/jebal">
+    <div class="container">
+   
+      <label for="여행지"><b>여행지</b></label>
+      <input type="text" placeholder="여행지를 입력하세요" name="search" required>
+      	<br/>
+       <label for="체크인"><b>체크인</b></label>
+      <input type="date" name="check-in">
+      <br/>
+       <label for="체크아웃"><b>체크아웃</b></label>
+      <input type="date" name="check-out">
+      <br/>
+      <label for="인원"><b>인원</b></label>
+		<select name = "인원">
+		<option value = "1명">성인 1명</option>
+		<option value = "2명">성인 2명</option>
+		<option value = "가족">가족</option>
+		<option value = "단체">단체</option>
+	 </select>
+		<br/>
+      <button type="submit" class="btn">확인</button>
+    </div>
+  </form>
+</div>
+</div>
+</body>
+</html>

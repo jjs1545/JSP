@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/article.css" />
+
+</head>
+
+<body>
+<div id = "div1">
+<h2 id = "best-trips">인기 여행지</h2>
+<h4 id = "trip-say">작년 4억 명의 여행자가 HOTELETOH에서 최고의 호텔 상품을 검색했습니다.</h4>
+<div class = "picture">
+<div class="gallery">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="/img/tokyo.jpg" alt="5Terre" width="400" height="300">
+  </a>
+  <div class="desc">일본 도쿄</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="/img/china.jpg" alt="5Terre" width="400" height="300">
+  </a>
+  <div class="desc">중국 만리장성</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="/img/hokkaido.jpg" alt="5Terre" width="400" height="300">
+  </a>
+  <div class="desc">일본 훗카이도</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="/img/france.jpg" alt="5Terre" width="400" height="300">
+  </a>
+  <div class="desc">프랑스 파리</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="/img/italy.jpg" alt="Northern Lights" width="400" height="300">
+  </a>
+  <div class="desc">이탈리아 베네치아</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="/img/greece.jpg" alt="Northern Lights" width="400" height="300">
+  </a>
+  <div class="desc">그리스 로마</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="/img/london.jpg" alt="Northern Lights" width="400" height="300">
+  </a>
+  <div class="desc">영국 런던</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="/img/australia.jpg" alt="Northern Lights" width="400" height="300">
+  </a>
+  <div class="desc">호주 시드니</div>
+</div>
+</div>
+</div>
+</body>
+</html>

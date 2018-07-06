@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/signup.css"/>
+</head>
+<body>
+<div id = "signup-container">	
+	<h1>HOTELETOH</h1>
+	<h2>계정만들기</h2>
+	
+	<br/><br/>
+	
+	<form method="post" action="/process/adduser">
+    <input type="text" id="signupID" name="id" placeholder="Your ID" size = 15;><br/><br/>
+    <input type="password" id="signupPW" name="password" placeholder="Your PW" size = 15;><br/><br/>
+    <input type="text" id="signupEmail" name="이름" placeholder="Your Name" size = 15;><br/><br/>
+    <input type="text" id="signupPW" name="signuppw" placeholder="Your PhoneNumber" size = 15;><br/><br/>
+    <input type="submit" value="확인" id = "signup-btn">
+ 	</form>
+ </div>
+</body>
+</html>

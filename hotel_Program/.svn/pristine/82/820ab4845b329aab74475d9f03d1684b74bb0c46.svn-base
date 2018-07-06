@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/article2.css" />
+</head>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<div id="div2">
+<h2 style="text-align:center">모든 호텔을 한눈에 비교</h2>
+<h4 id = "compare-say">
+		전 세계 210만 개의 호텔을 한 번에 비교하여  <br/>
+			마음에 쏙 드는 호텔을 예약하세요.
+</h4>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="/img/hotel2.jpg" style="width:1850" height="800">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="/img/hotel3.jpg" style="width:1850" height="800">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="/img/hotel4.jpg" style="width:1850" height="800">
+  <div class="text">Caption Three</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="/img/hotel5.jpg" style="width:1850" height="800">
+  <div class="text">Caption four</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+</div>
+
+
+
+	<div id="div3">
+	<h2 id = "hotels-cheeps">최저가 보장</h2>
+	<h4 id = "cheeps-say">
+		예약 수수료가 없습니다.<br/>
+		HOTELETOH가 고객님께 드리는 약속입니다.  
+	</h4>
+	<div id = "coins-image">
+	<img src="/img/coins.jpg" width="1500" height="750" >
+	</div>
+</div>
+
+<div id="div4">
+	<h2 id = "company-introduces" >회사 소개</h2>
+	<h4 id = "introduce-say">최대80%까지 할인되는 호텔상품 최저가 호텔검색 HOTELLETOH에서</h4>
+<div id= "company-img">
+	<img src="/img/team.jpg" width="1500" height="750" >
+</div>
+</div>
+</body>
+</html>

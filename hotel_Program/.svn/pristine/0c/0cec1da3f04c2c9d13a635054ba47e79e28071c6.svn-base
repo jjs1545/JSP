@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입 확인창</title>
+</head>
+<body>
+	<h1>회원가입되셨습니다.</h1>
+	<br/>
+	<div>
+		<p>가입한 이메일 : <%= userid %></p>
+		<p>가입자명: <%= username %></p>
+		<br/><br/>
+		<a href="/">홈으로</a>
+	</div>
+</body>
+</html>

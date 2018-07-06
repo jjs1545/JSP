@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/myinfo.css" />
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+document.getElementById("defaultOpen").click();
+</script>
+</head>
+<body>
+	<div class="write-header" style="margin-bottom:0">
+  <a href="/index2"><img src="/img/logo.png"></a>
+  <h1>유저정보</h1> 
+	</div>
+	<div class = "infolist">
+<button class="tablink" onclick="openPage('News', this, 'black')" id="defaultOpen">회원정보</button>
+<button class="tablink" onclick="openPage('Contact', this, 'black')" >예약 현황</button>
+<div id="News" class="tabcontent">
+ <div id = "infotable">
+   <table id = "usertable"> 
+   <tr>
+    <th>이름</th>
+    <th>아이디</th>
+    <th>패스워드</th>
+  </tr>
+  <tr>
+    <td><%=user.name%></td>
+    <td><%=user.id%></td>
+    <td><%=user.password%></td>
+  </tr>
+   </table>
+ </div>
+</div>
+<div id="Contact" class="tabcontent">
+<div id = "resertable">
+   <table id = "vationtable"> 
+   <tr>
+    <th>나라</th>
+    <th>도시</th>
+    <th>호텔이름</th>
+  </tr>
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+   </table>
+ </div>
+</div>
+ </div>
+</div>
+</body>
+</html>

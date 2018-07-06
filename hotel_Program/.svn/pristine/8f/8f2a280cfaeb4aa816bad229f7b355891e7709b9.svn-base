@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+  $(document).ready(function(){
+	  $("#contents").load("/main/contents.html")
+  });
+ 
+  $(document).ready(function(){
+	  $("#article").load("/main/article.html")
+  });
+  
+  $(document).ready(function(){
+	  $("#article2").load("/main/article2.html")
+  });
+  
+/*    $(document).ready(function(){
+	  $("#footer").load("main/footer.html")
+  });  */
+  
+
+
+  
+ </script>
+</head>
+<% include ./header2.ejs %> 
+<body>
+	<div id = "contents"></div>
+	<div id = "article"></div>
+	<div id = "article2"></div>
+	<div id = "footer"></div>
+</body>
+</html>

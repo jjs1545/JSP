@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/login.css"/>
+</head>
+
+<script>
+
+</script>
+<body>
+	<div class="container">
+		<div>
+			<div id = "login-container">	
+				<a href="/index2"><img src="/img/logo.png"></a>
+				<h2>계정</h2>
+				
+				<% if (message.length > 0 ) { %>
+					<div  class="alert alert-danger"><%= message %></div>
+				<% } %>
+					
+				<br/><br/>
+				
+				<form action="/login" method="post">
+				    <input type="text" id="loginID" name="id" placeholder="Your Email" size = 15;><br/><br/>
+				    <input type="password" id="loginPW" name="password" placeholder="Your PW" size = 15;><br/><br/><br/><br/><br/><br/>
+				    <button type="submit" id = "login-btn">로그인</button>
+				    <br/><a href = "/auth/facebook">페이스북으로 로그인</a>
+		 		</form>
+		 		<p>계정이 없으세욘? <a href="/signup">회원가입하기</a></p>
+			<p><a href="/">홈으로</a></p>
+		 	</div>
+		 </div>
+	</div>
+</body>
+</html>

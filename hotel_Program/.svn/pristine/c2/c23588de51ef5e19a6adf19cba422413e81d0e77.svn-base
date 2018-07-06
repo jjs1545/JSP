@@ -1,0 +1,90 @@
+@charset "EUC-KR";
+label {
+    /* To make sure that all label have the same size and are properly align */
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+}
+
+  .fakeimg {
+  	  width:500px;
+      height: 250px;
+      background: #aaa;
+ }
+ .form-container{
+ 	margin: 0 auto;
+    width: 300px;
+    /* To see the outline of the form */
+    padding: 1em;
+    border: 2px solid #000000;
+    border-radius: 2em;	
+}
+
+.jumbotron {
+	height : 200px;
+	background-image: url("/hotelProject/img/plane.jpg");
+}
+
+#text2{
+	display: inline-block;
+    width: 80%;
+    left : 200px;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+#text2:focus{
+    background-color:#ddd;
+    outline: none;
+}
+
+#date2{
+	display: inline-block;
+    width: 200px;
+    text-align: right;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+select{
+	width: 50%;
+	padding : 12px;
+	border: 1px solid #ccc;
+    border-radius: 4px;
+	resize: vertical;
+}
+
+.btn {
+	position :relative;
+	margin : 0,0,0px,0;
+	left : 180px; 
+	background-color: #666666;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+}
+   
+.btn:hover {
+    opacity: 0.5;
+}
+
+.btn2 {
+	position :relative;
+	margin : 0,0,0,0;
+	left : 5px;
+    padding: 10px 10px;
+    border: none;
+    width: 30%;
+    text-align: center;
+    
+}
+   
+.btn2:hover {
+    opacity: 0.5;
+}

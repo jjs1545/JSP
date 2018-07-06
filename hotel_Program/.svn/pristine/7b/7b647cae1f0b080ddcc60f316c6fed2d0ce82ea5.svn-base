@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/signup.css"/>
+</head>
+<script>
+	function isNull(obj, msg) {
+		if (obj.value == "") {
+			alert(msg);
+			obj.focus();
+			return true;
+		}
+	}
+	
+	function checkInput(){
+		var f = document.signUpForm;
+		
+		if(isNull(f.id, '아이디를 입력해주세요'))
+			return false;
+		if(isNull(f.password, '비밀번호를 입력해주세요'))
+			return false;
+		if(isNull(f.name, '이름을 입력해주세요'))
+			return false;
+		if(f.password.value != f.passwordCheck.value){
+			alert('비밀번호가 일치하지 않습니다');
+			return false;
+		}
+		
+		document.signUpForm.submit();
+		
+	}
+</script>
+<body>
+<div id = "signup-container">	
+	<a href="/index"><img src="/img/logo.png"></a>
+	<h2>계정만들기</h2>
+	
+	<% if(message.length > 0) { %>
+		<div class="alert alert-danger"><%= message %></div>
+	<% } %>
+				
+	<br/><br/>
+	
+	<form method="post" name="signUpForm" action="/signup" onsubmit="return checkInput()">
+	    <input type="email" id="signupID" name="id" placeholder="Your Email" size = 15;><br/><br/>
+	    <input type="password" id="signupPW" name="password" placeholder="Your PW" size = 15;><br/><br/>
+	    <input type="password" id="signupPWC" name="passwordCheck" placeholder="Your PW" size = 15;><br/><br/>
+	    <input type="text" id="signupEmail" name="name" placeholder="Your Name" size = 15;><br/><br/>
+	    <button type="submit" id = "signup-btn">회원가입</button>					
+		<p>이미 계정이 있으세욘?<a href="/login">로그인하기</a>
+ 	</form>
+ </div>
+</body>
+</html>

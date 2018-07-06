@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/hotelProject/css/searchresult.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h2>지역 이름</h2>
+  <p>지역 설명</p> 
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+ </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+     <div class = "form-container">
+    <form action="">
+      <label for="여행지"><b>여행지</b></label>
+      <input type="text" id = "text2" placeholder="여행지를 입력하세요" name="text1" required>
+      	<br/>
+       <label for="체크인"><b>체크인</b></label>
+      <input type="date" id = "date2" name="check-in" required>
+      <br/>
+       <label for="체크아웃"><b>체크아웃</b></label>
+      <input type="date" id = "date2" name="check-out" required>
+      <br/>
+      <label for="인원"><b>인원</b></label>
+      	<br />
+		<select id = "select2" name = "인원">
+		<option value = "1명">성인 1명</option>
+		<option value = "2명">성인 2명</option>
+		<option value = "가족">가족</option>
+		<option value = "단체">단체</option>
+	 </select>
+		<br/>
+      <button type="submit" class="btn">확인</button>
+  </form>
+  </div>
+ </div>
+
+ <div class="col-sm-8">
+      <h2>HOTEL NAME</h2>
+      <h5><button class = "btn2">지도보기 </button > <button class = "btn2">예약하기</button></h5>
+      <div class="fakeimg">
+      	이미지이~~
+      	<img src=" ">
+      </div>
+       <p>Resize this responsive page to see the effect!</p> 
+</div>
+ </div>
+</div>   
+</body>
+</html>

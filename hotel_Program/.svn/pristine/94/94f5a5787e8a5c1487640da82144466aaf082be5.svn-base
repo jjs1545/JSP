@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/contents.css" />
+</head>
+
+<script>
+function fnMove(seq){
+    var offset = $("#div" + seq).offset();
+    $('html, body').animate({scrollTop : offset.top}, 400);
+}
+</script>
+<body>
+	
+	<div class = "contents">
+	<h1 id = "keyword"> 많이 찾는 키워드 </h1>
+	<div id = "write">
+	<h3 id = "text2">HOTELETOH에서</h3>
+	<h3 id = "text2">고객들이 가장 많이 찾은 키워드입니다.</h3>
+	<div class ="list2">
+	<button id = "best-trip" onclick="fnMove('1')"> #인기 여행지 </button>
+    <button id = "hotel-compire" onclick="fnMove('2')"> #모든 호텔을 한눈에 비교 </button> <br />
+    <button id = "hotels-cheep" onclick="fnMove('3')"> #최저가 보장</button>
+    <button id = "company-introduce" onclick="fnMove('4')"> #회사 소개 </button>
+    <button id = "hotel-compire" onclick="fnMove('4')"> #호텔 후기 </button>
+    </div>
+    </div>
+   
+    </div>
+</body>
+</html>

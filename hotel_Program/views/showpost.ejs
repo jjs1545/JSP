@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="/public/semantic.min.css" rel="stylesheet" >
+    <link href="/public/cleditor/jquery.cleditor.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="/css/viewdetail.css" />
+</head>
+<body>
+  <div class="view-header" style="margin-bottom:0">
+    <h1>게시글 조회</h1> 
+  </div>
+  <div class =  viewlist>
+ <form>
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">제목</label>
+      </div>
+             <% 
+               var curTitle = posts._doc.title;
+               var curContents = posts._doc.contents;
+               var curWriter = posts._doc.writer.id; 
+               var Contents = posts.contents;
+            %>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="<%=curTitle%>">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">작성자</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="<%=curWriter%>">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">내용</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="<%=curContents%>" style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <a class="ui button" href='/process/listpost?page=0&perPage=5'>글 목록</a>
+    </div>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+@charset "EUC-KR";
+
+body{
+	background-color : #c0c0c0;
+}
+
+#signup-container{
+	position: relative;
+	text-align: center;
+   	left : 36%; top:50px;
+    max-width: 500px;
+    height : 600px;
+    padding: 16px;
+    background-color: white;
+}
+#signup-btn{
+	position :relative;
+	margin : 0,0,10px,0;
+	left : 10px;
+    background-color: #666666;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    width: 40%;
+    font-size: 15pt;
+}
+
+input[type=text],input[type=password],input[type=email]{
+    width: 80%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+input[type=text]:focus{
+    background-color:#ddd;
+    outline: none;
+}
+
+input[type=password]:focus{
+    background-color:#ddd;
+    outline: none;
+}
+
+#signup-btn:hover {
+    opacity: 0.5;
+}

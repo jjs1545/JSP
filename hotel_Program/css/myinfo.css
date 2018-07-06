@@ -1,0 +1,126 @@
+@charset "EUC-KR";
+
+.write-header {
+	height : 200px;
+	background-image: url("/img/plane.jpg");
+	background-size : cover;
+	color : white;
+	text-align : center;
+}
+
+.write-header h1{
+	position : relative;
+	top : 75px;
+}
+
+* {box-sizing: border-box}
+
+#infotable{
+	position : relative; 
+	top : 50px; 
+	margin : auto;
+	text-align : center;
+	height : 1000px;
+	width : 1000px;
+}
+
+#usertable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#usertable td, #usertable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#usertable tr:nth-child(even){background-color: #f2f2f2;}
+
+#usertable tr:hover {background-color: #ddd;}
+
+#usertable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #8a8a8a;
+    color: white;
+}
+/* 시바 이거 이거 테이블2 이다 */ 
+#resertable{
+	position : relative; 
+	top : 50px; 
+	margin : auto;
+	text-align : center;
+	height : 1000px;
+	width : 1000px;
+}
+
+#vationtable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#vationtable td, #vationtable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#vationtable tr:nth-child(even){background-color: #f2f2f2;}
+
+#vationtable tr:hover {background-color: #ddd;}
+
+#vationtable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #8a8a8a;
+    color: white;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    margin : auto;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 49.8%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+
+#News {background-color: #ffffff;
+  border: black;
+      border-style: solid;
+    border-width: 5px;
+}
+#Contact {background-color: #ffffff;
+border: black;
+border-style: solid;
+border-width: 5px;
+}
+
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    width: 99.6%;
+    border-left: none;
+    height: 300px;
+}

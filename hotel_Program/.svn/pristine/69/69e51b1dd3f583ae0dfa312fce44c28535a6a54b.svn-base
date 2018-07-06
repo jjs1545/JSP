@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width, height=device-height, initial-scale=1" >
+    <title>회사위치</title>
+        
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #map {
+            width: 100%;
+            height: 95%;
+        }
+    </style>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU4-7uz53KFV2aA3T0sVnrxzTQLzUaSQU"></script>
+    
+    <script>
+        function onLoad() {
+            initMap();
+        }
+
+        var map;
+        var centerLocation = {lat: <%= paramLongitude %>, lng: <%= paramLatitude %>};
+         
+        function initMap() {
+             
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: centerLocation,
+                zoom: 17
+            });
+            
+            var marker = new google.maps.Marker({
+                position:centerLocation,
+                icon:'/public/mylocation.png',
+                animation:google.maps.Animation.BOUNCE
+            });
+
+            marker.setMap(map);
+        }
+        
+    </script>
+    
+</head>
+<body onload="onLoad()">
+	<div align="center">
+	<br/>
+    <a href="/index2"><img src="/img/logo.png"></a>
+    <br/>
+    <h2>회사 위치</h2>
+    <br/><br/>
+	</div>
+    <div id="map"></div>
+</body>
+</html>
